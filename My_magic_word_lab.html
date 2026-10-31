@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: darkorange;">My Magic Word Lab</h1>
+        <p>Discover types, switch them,find,andswap wordsand catch sneaky errors </p>
+        <div class="card">
+            <div class="card-body">
+            <div class="card-title">What Type Is It?</div>
+            <button class="btn btn-warning"onclick="checktypes()">Reveal The Types!</button>
+            <div id="typeResult">Press the button to reveal the secret types</div>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title">Switch the type</div>
+                <input id="numIn"placeholder="typeany number here (try:42)"><br><br>
+                <button class="btn btn-warning" onclick="toStr()">Turn Into Text</button>
+                <div id="convResult">Type a number above then press the button!</div>   
+            </div>
+        </div>
+    </div>
+    <script>
+        function checktypes(){
+            document.getElementById(typeresult).innerText = 
+            "Score 42       -type:"+ typeof 42 +"\n" +
+            "Name 'Alex'    -type:"+ typeof "Alex" + "\n" +
+            "Game over true -type:"+ typeof true;
+        }
+        function toStr() {
+
+                var v = document.getElementById("numIn").value;
+
+                document.getElementById("convResult").innerHTML = "String(" + v + ")='" + String(v) + "' — now it is a: " + typeof String(v);
+
+            }
+    </script>
+    </body>
+</body>
+</html>
